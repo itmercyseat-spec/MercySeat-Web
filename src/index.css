@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 258 55% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 258 55% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 258 55% 15%;
+
+    /* Royal Purple - Spiritual depth (DOMINANT) */
+    --primary: 270 80% 55%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Clean White/Light Grey - Peace and calm */
+    --secondary: 240 20% 96%;
+    --secondary-foreground: 258 55% 15%;
+
+    --muted: 250 15% 95%;
+    --muted-foreground: 258 25% 45%;
+
+    /* Vibrant Gold - Divine excellence (DOMINANT) */
+    --accent: 42 100% 50%;
+    --accent-foreground: 258 55% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 258 20% 90%;
+    --input: 258 20% 90%;
+    --ring: 258 70% 55%;
+
+    --radius: 0.75rem;
+
+    /* Custom church colors - Purple & Gold DOMINANT */
+    --church-purple: 270 80% 55%;
+    --church-purple-light: 270 80% 65%;
+    --church-purple-dark: 270 80% 40%;
+    --church-blue: 200 70% 75%;
+    --church-blue-light: 200 70% 85%;
+    --church-gold: 42 100% 50%;
+    --church-gold-light: 42 100% 62%;
+    --church-gold-dark: 42 100% 42%;
+
+    /* Gradients - Purple & Gold emphasis */
+    --gradient-divine: linear-gradient(135deg, hsl(var(--church-purple)) 0%, hsl(var(--church-gold)) 100%);
+    --gradient-worship: linear-gradient(180deg, hsl(var(--church-purple) / 0.1) 0%, hsl(var(--background)) 100%);
+    --gradient-mission: linear-gradient(135deg, hsl(var(--church-gold)) 0%, hsl(var(--church-purple)) 100%);
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsl(var(--church-purple) / 0.1);
+    --shadow-glow: 0 0 30px hsl(var(--church-gold) / 0.3);
+  }
+
+  .dark {
+    --background: 258 40% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 258 35% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 258 35% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 258 70% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 200 60% 45%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 258 30% 20%;
+    --muted-foreground: 258 20% 70%;
+
+    --accent: 45 90% 60%;
+    --accent-foreground: 258 40% 8%;
+
+    --destructive: 0 62.8% 40.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 258 30% 20%;
+    --input: 258 30% 20%;
+    --ring: 258 70% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html, body, #root {
+    @apply bg-background text-foreground;
+    min-height: 100vh;
+    min-height: 100dvh;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Safe area insets for notched devices */
+  body {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+}
