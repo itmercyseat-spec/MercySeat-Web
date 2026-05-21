@@ -26,53 +26,53 @@ const allEvents: Event[] = [
   {
     id: 1,
     title: "Governance & Dominion Conference 2026",
-    dateValue: new Date("2026-01-29"),
-    image: governanceConference
+    dateValue: new Date("2026-01-01"),
+    image: governanceConference,
   },
   {
     id: 2,
     title: "Teachers Needed - Children's Church",
     dateValue: new Date("2026-12-31"), // Ongoing recruitment
-    image: teachersNeeded
+    image: teachersNeeded,
   },
   {
     id: 3,
     title: "Going Back to God - Women's Conference 2025",
     dateValue: new Date("2025-10-25"),
-    image: womensConference
+    image: womensConference,
   },
   {
     id: 4,
     title: "Cross Over Service - More Than Conquerors",
     dateValue: new Date("2025-12-31"),
-    image: crossoverService
+    image: crossoverService,
   },
   {
     id: 5,
     title: "Worship Night",
     dateValue: new Date("2025-11-28"),
-    image: worshipNight
+    image: worshipNight,
   },
   {
     id: 6,
     title: "The Full Armor",
     dateValue: new Date("2025-12-29"),
-    image: fullArmor
-  }
+    image: fullArmor,
+  },
 ];
 
 const upcomingEvents = allEvents
-  .filter(event => event.dateValue >= currentDate)
+  .filter((event) => event.dateValue >= currentDate)
   .sort((a, b) => a.dateValue.getTime() - b.dateValue.getTime());
 
 const pastEvents = allEvents
-  .filter(event => event.dateValue < currentDate)
+  .filter((event) => event.dateValue < currentDate)
   .sort((a, b) => b.dateValue.getTime() - a.dateValue.getTime());
 
 const EventCard = ({ event }: { event: Event }) => (
   <Card className="overflow-hidden hover:shadow-lg transition-shadow">
-    <img 
-      src={event.image} 
+    <img
+      src={event.image}
       alt={event.title}
       className="w-full h-auto object-cover"
     />
@@ -83,7 +83,7 @@ const Events = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      
+
       <main className="pt-32 pb-16">
         <div className="container mx-auto px-4">
           {/* Header */}
@@ -97,7 +97,8 @@ const Events = () => {
               Church Events
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Stay updated with all our special events, conferences, and gatherings
+              Stay updated with all our special events, conferences, and
+              gatherings
             </p>
           </div>
 
@@ -158,8 +159,14 @@ const Events = () => {
                 For More Information
               </h3>
               <p className="text-muted-foreground">
-                Contact us at <span className="text-primary font-medium">+27 62 419 4169</span> or visit us at{" "}
-                <span className="text-primary font-medium">687 Elephant Street, Villa Lisa, Boksburg</span>
+                Contact us at{" "}
+                <span className="text-primary font-medium">
+                  +27 62 419 4169
+                </span>{" "}
+                or visit us at{" "}
+                <span className="text-primary font-medium">
+                  687 Elephant Street, Villa Lisa, Boksburg
+                </span>
               </p>
             </CardContent>
           </Card>
