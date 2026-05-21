@@ -29,36 +29,36 @@ import mrsMolefeSpeakingImg from "@/assets/gallery/mrs-molefe-speaking.jpeg";
 import apostleFormal1Img from "@/assets/gallery/apostle-formal-1.jpeg";
 import apostleReadingBibleImg from "@/assets/gallery/apostle-reading-bible.jpeg";
 import apostleAndWifeFormalImg from "@/assets/gallery/apostle-and-wife-formal.jpeg";
+import family1Img from "@/assets/gallery/family-1.jpeg";
+import family2Img from "@/assets/gallery/family-2.jpeg";
+import coupleElegantImg from "@/assets/gallery/couple-elegant.jpeg";
 
-type Category = "all" | "apostle" | "mrs-molefe" | "pastor-wife" | "members" | "music";
+type Category = "all" | "pastor-wife" | "members" | "music";
 
 const categories: { value: Category; label: string }[] = [
   { value: "all", label: "All Photos" },
-  { value: "apostle", label: "Apostle T.I. Molefe" },
-  { value: "mrs-molefe", label: "Mrs P.P. Molefe" },
   { value: "pastor-wife", label: "Pastor & Wife" },
   { value: "members", label: "Church Members" },
   { value: "music", label: "Music Ministry" },
 ];
 
 const photos = [
-  // Apostle T.I. Molefe
-  { id: 1, src: pastorImg, title: "Apostle T.I. Molefe", category: "apostle" as const },
-  { id: 2, src: apostleFormal1Img, title: "Apostle T.I. Molefe – Formal Portrait", category: "apostle" as const },
-  { id: 3, src: apostleCasual1Img, title: "Apostle T.I. Molefe – Casual", category: "apostle" as const },
-  { id: 4, src: apostleCasual2Img, title: "Apostle T.I. Molefe – Smiling", category: "apostle" as const },
-  { id: 5, src: apostlePreaching1Img, title: "Apostle T.I. Molefe – Preaching", category: "apostle" as const },
-  { id: 6, src: apostlePreaching2Img, title: "Apostle T.I. Molefe – At the Podium", category: "apostle" as const },
-  { id: 7, src: apostleReadingBibleImg, title: "Apostle T.I. Molefe – Reading Bible", category: "apostle" as const },
-
-  // Mrs P.P. Molefe
-  { id: 8, src: mrsMolefeSpeakingImg, title: "Mrs P.P. Molefe – Speaking", category: "mrs-molefe" as const },
-
-  // Pastor & Wife
+  // Pastor & Wife (Apostle T.I. & Mrs P.P. Molefe and Family)
+  { id: 1, src: pastorImg, title: "Apostle T.I. Molefe", category: "pastor-wife" as const },
+  { id: 2, src: apostleFormal1Img, title: "Apostle T.I. Molefe – Formal Portrait", category: "pastor-wife" as const },
+  { id: 3, src: apostleCasual1Img, title: "Apostle T.I. Molefe – Casual", category: "pastor-wife" as const },
+  { id: 4, src: apostleCasual2Img, title: "Apostle T.I. Molefe – Smiling", category: "pastor-wife" as const },
+  { id: 5, src: apostlePreaching1Img, title: "Apostle T.I. Molefe – Preaching", category: "pastor-wife" as const },
+  { id: 6, src: apostlePreaching2Img, title: "Apostle T.I. Molefe – At the Podium", category: "pastor-wife" as const },
+  { id: 7, src: apostleReadingBibleImg, title: "Apostle T.I. Molefe – Reading Bible", category: "pastor-wife" as const },
+  { id: 8, src: mrsMolefeSpeakingImg, title: "Mrs P.P. Molefe – Speaking", category: "pastor-wife" as const },
   { id: 9, src: pastorAndWifeImg, title: "Apostle T.I. & Mrs P.P. Molefe", category: "pastor-wife" as const },
-  { id: 10, src: apostleAndWifeFormalImg, title: "Apostle & Wife – Formal Portrait", category: "pastor-wife" as const },
-  { id: 11, src: apostleAndWife2Img, title: "Apostle & Wife – Together", category: "pastor-wife" as const },
-  { id: 12, src: apostleAndWife3Img, title: "Apostle & Wife – Fellowship", category: "pastor-wife" as const },
+  { id: 10, src: coupleElegantImg, title: "Apostle & Wife – Elegant Portrait", category: "pastor-wife" as const },
+  { id: 11, src: apostleAndWifeFormalImg, title: "Apostle & Wife – Formal Portrait", category: "pastor-wife" as const },
+  { id: 12, src: apostleAndWife2Img, title: "Apostle & Wife – Together", category: "pastor-wife" as const },
+  { id: 26, src: apostleAndWife3Img, title: "Apostle & Wife – Fellowship", category: "pastor-wife" as const },
+  { id: 24, src: family1Img, title: "The Molefe Family", category: "pastor-wife" as const },
+  { id: 25, src: family2Img, title: "The Molefe Family Portrait", category: "pastor-wife" as const },
 
   // Church Members
   { id: 13, src: membersImg, title: "Church Members", category: "members" as const },
