@@ -4,7 +4,14 @@ import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
-import { Image, Video, X, ChevronLeft, ChevronRight, Images } from "lucide-react";
+import {
+  Image,
+  Video,
+  X,
+  ChevronLeft,
+  ChevronRight,
+  Images,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import membersImg from "@/assets/members.jpg";
 import leadershipImg from "@/assets/leadership.jpg";
@@ -44,36 +51,166 @@ const categories: { value: Category; label: string }[] = [
 
 const photos = [
   // Pastor & Wife (Apostle T.I. & Mrs P.P. Molefe and Family)
-  { id: 1, src: pastorImg, title: "Apostle T.I. Molefe", category: "pastor-wife" as const },
-  { id: 2, src: apostleFormal1Img, title: "Apostle T.I. Molefe – Formal Portrait", category: "pastor-wife" as const },
-  { id: 3, src: apostleCasual1Img, title: "Apostle T.I. Molefe – Casual", category: "pastor-wife" as const },
-  { id: 4, src: apostleCasual2Img, title: "Apostle T.I. Molefe – Smiling", category: "pastor-wife" as const },
-  { id: 5, src: apostlePreaching1Img, title: "Apostle T.I. Molefe – Preaching", category: "pastor-wife" as const },
-  { id: 6, src: apostlePreaching2Img, title: "Apostle T.I. Molefe – At the Podium", category: "pastor-wife" as const },
-  { id: 7, src: apostleReadingBibleImg, title: "Apostle T.I. Molefe – Reading Bible", category: "pastor-wife" as const },
-  { id: 8, src: mrsMolefeSpeakingImg, title: "Mrs P.P. Molefe – Speaking", category: "pastor-wife" as const },
-  { id: 9, src: pastorAndWifeImg, title: "Apostle T.I. & Mrs P.P. Molefe", category: "pastor-wife" as const },
-  { id: 10, src: coupleElegantImg, title: "Apostle & Wife – Elegant Portrait", category: "pastor-wife" as const },
-  { id: 11, src: apostleAndWifeFormalImg, title: "Apostle & Wife – Formal Portrait", category: "pastor-wife" as const },
-  { id: 12, src: apostleAndWife2Img, title: "Apostle & Wife – Together", category: "pastor-wife" as const },
-  { id: 26, src: apostleAndWife3Img, title: "Apostle & Wife – Fellowship", category: "pastor-wife" as const },
-  { id: 24, src: family1Img, title: "The Molefe Family", category: "pastor-wife" as const },
-  { id: 25, src: family2Img, title: "The Molefe Family Portrait", category: "pastor-wife" as const },
+  {
+    id: 1,
+    src: pastorImg,
+    title: "Apostle T.I. Molefe",
+    category: "pastor-wife" as const,
+  },
+  {
+    id: 2,
+    src: apostleFormal1Img,
+    title: "Apostle T.I. Molefe – Formal Portrait",
+    category: "pastor-wife" as const,
+  },
+  {
+    id: 3,
+    src: apostleCasual1Img,
+    title: "Apostle T.I. Molefe – Casual",
+    category: "pastor-wife" as const,
+  },
+  {
+    id: 4,
+    src: apostleCasual2Img,
+    title: "Apostle T.I. Molefe – Smiling",
+    category: "pastor-wife" as const,
+  },
+  {
+    id: 5,
+    src: apostlePreaching1Img,
+    title: "Apostle T.I. Molefe – Preaching",
+    category: "pastor-wife" as const,
+  },
+  {
+    id: 6,
+    src: apostlePreaching2Img,
+    title: "Apostle T.I. Molefe – At the Podium",
+    category: "pastor-wife" as const,
+  },
+  {
+    id: 7,
+    src: apostleReadingBibleImg,
+    title: "Apostle T.I. Molefe – Reading Bible",
+    category: "pastor-wife" as const,
+  },
+  {
+    id: 8,
+    src: mrsMolefeSpeakingImg,
+    title: "Mrs P.P. Molefe – Speaking",
+    category: "pastor-wife" as const,
+  },
+  {
+    id: 9,
+    src: pastorAndWifeImg,
+    title: "Apostle T.I. & Mrs P.P. Molefe",
+    category: "pastor-wife" as const,
+  },
+  {
+    id: 10,
+    src: coupleElegantImg,
+    title: "Apostle & Wife – Elegant Portrait",
+    category: "pastor-wife" as const,
+  },
+  {
+    id: 11,
+    src: apostleAndWifeFormalImg,
+    title: "Apostle & Wife – Formal Portrait",
+    category: "pastor-wife" as const,
+  },
+  {
+    id: 12,
+    src: apostleAndWife2Img,
+    title: "Apostle & Wife – Together",
+    category: "pastor-wife" as const,
+  },
+  {
+    id: 26,
+    src: apostleAndWife3Img,
+    title: "Apostle & Wife – Fellowship",
+    category: "pastor-wife" as const,
+  },
+  {
+    id: 24,
+    src: family1Img,
+    title: "The Molefe Family",
+    category: "pastor-wife" as const,
+  },
+  {
+    id: 25,
+    src: family2Img,
+    title: "The Molefe Family Portrait",
+    category: "pastor-wife" as const,
+  },
 
   // Church Members
-  { id: 13, src: membersImg, title: "Church Members", category: "members" as const },
-  { id: 14, src: leadershipImg, title: "Church Leadership", category: "members" as const },
-  { id: 15, src: sundayServiceImg, title: "Sunday Service Worship", category: "members" as const },
-  { id: 16, src: youthWorshipImg, title: "Youth Worship Service", category: "members" as const },
-  { id: 17, src: worshipServiceImg, title: "Prayer Service", category: "members" as const },
-  { id: 18, src: youthPrayerImg, title: "Youth in Prayer", category: "members" as const },
-  { id: 19, src: congregationPrayerImg, title: "Congregation in Prayer", category: "members" as const },
+  {
+    id: 13,
+    src: membersImg,
+    title: "Church Members",
+    category: "members" as const,
+  },
+  {
+    id: 14,
+    src: leadershipImg,
+    title: "Church Leadership",
+    category: "members" as const,
+  },
+  {
+    id: 15,
+    src: sundayServiceImg,
+    title: "Sunday Service Worship",
+    category: "members" as const,
+  },
+  {
+    id: 16,
+    src: youthWorshipImg,
+    title: "Youth Worship Service",
+    category: "members" as const,
+  },
+  {
+    id: 17,
+    src: worshipServiceImg,
+    title: "Prayer Service",
+    category: "members" as const,
+  },
+  {
+    id: 18,
+    src: youthPrayerImg,
+    title: "Youth in Prayer",
+    category: "members" as const,
+  },
+  {
+    id: 19,
+    src: congregationPrayerImg,
+    title: "Congregation in Prayer",
+    category: "members" as const,
+  },
 
-  // Music Ministry
-  { id: 20, src: worshipTeamImg, title: "Worship Team Leading Praise", category: "music" as const },
-  { id: 21, src: musicBandImg, title: "Music Ministry Band", category: "music" as const },
-  { id: 22, src: musiciansImg, title: "Keyboard & Drums", category: "music" as const },
-  { id: 23, src: mansMinistryImg, title: "Men's Ministry", category: "music" as const },
+  // Psalmists
+  {
+    id: 20,
+    src: worshipTeamImg,
+    title: "Worship Team Leading Praise",
+    category: "music" as const,
+  },
+  {
+    id: 21,
+    src: musicBandImg,
+    title: "Music Ministry Band",
+    category: "music" as const,
+  },
+  {
+    id: 22,
+    src: musiciansImg,
+    title: "Keyboard & Drums",
+    category: "music" as const,
+  },
+  {
+    id: 23,
+    src: mansMinistryImg,
+    title: "Men's Ministry",
+    category: "music" as const,
+  },
 ];
 
 const videos = [
@@ -101,11 +238,14 @@ const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState<Category>("all");
   const [selectedPhoto, setSelectedPhoto] = useState<number | null>(null);
 
-  const filteredPhotos = selectedCategory === "all"
-    ? photos
-    : photos.filter(photo => photo.category === selectedCategory);
+  const filteredPhotos =
+    selectedCategory === "all"
+      ? photos
+      : photos.filter((photo) => photo.category === selectedCategory);
 
-  const currentPhotoIndex = filteredPhotos.findIndex(p => p.id === selectedPhoto);
+  const currentPhotoIndex = filteredPhotos.findIndex(
+    (p) => p.id === selectedPhoto,
+  );
   const currentPhoto = filteredPhotos[currentPhotoIndex];
 
   const handlePrevious = () => {
@@ -137,7 +277,8 @@ const Gallery = () => {
               Gallery
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Explore moments from our services, events, and fellowship gatherings
+              Explore moments from our services, events, and fellowship
+              gatherings
             </p>
           </div>
 
@@ -160,7 +301,11 @@ const Gallery = () => {
                 {categories.map((category) => (
                   <Button
                     key={category.value}
-                    variant={selectedCategory === category.value ? "default" : "outline"}
+                    variant={
+                      selectedCategory === category.value
+                        ? "default"
+                        : "outline"
+                    }
                     size="sm"
                     onClick={() => setSelectedCategory(category.value)}
                     className="transition-all duration-200"
@@ -185,7 +330,9 @@ const Gallery = () => {
                         className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                        <p className="text-white font-semibold p-4">{photo.title}</p>
+                        <p className="text-white font-semibold p-4">
+                          {photo.title}
+                        </p>
                       </div>
                     </CardContent>
                   </Card>
@@ -194,7 +341,9 @@ const Gallery = () => {
 
               {filteredPhotos.length === 0 && (
                 <div className="text-center py-12">
-                  <p className="text-muted-foreground">No photos in this category yet.</p>
+                  <p className="text-muted-foreground">
+                    No photos in this category yet.
+                  </p>
                 </div>
               )}
             </TabsContent>
@@ -237,7 +386,10 @@ const Gallery = () => {
       </main>
 
       {/* Photo Lightbox */}
-      <Dialog open={selectedPhoto !== null} onOpenChange={() => setSelectedPhoto(null)}>
+      <Dialog
+        open={selectedPhoto !== null}
+        onOpenChange={() => setSelectedPhoto(null)}
+      >
         <DialogContent className="max-w-4xl w-full p-0 bg-black/95 border-none">
           {currentPhoto && (
             <div className="relative">
@@ -275,7 +427,9 @@ const Gallery = () => {
               />
 
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-                <h3 className="text-white text-xl font-semibold">{currentPhoto.title}</h3>
+                <h3 className="text-white text-xl font-semibold">
+                  {currentPhoto.title}
+                </h3>
                 <p className="text-white/70 text-sm mt-1">
                   {currentPhotoIndex + 1} of {filteredPhotos.length}
                 </p>
