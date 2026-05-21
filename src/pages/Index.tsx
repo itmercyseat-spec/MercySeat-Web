@@ -4,8 +4,22 @@ import { WelcomeDialog } from "@/components/WelcomeDialog";
 import { InstallPrompt } from "@/components/InstallPrompt";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import { Calendar, Users, BookOpen, Clock, MapPin, Phone, Play } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
+import {
+  Calendar,
+  Users,
+  BookOpen,
+  Clock,
+  MapPin,
+  Phone,
+  Play,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import heroImage from "@/assets/members.jpg";
@@ -20,17 +34,21 @@ const Index = () => {
       <Navigation />
       <WelcomeDialog />
       <InstallPrompt />
-      
+
       {/* Hero Section with Critical Info */}
       <section className="relative min-h-[650px] flex items-center justify-center overflow-hidden mt-20">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-primary/85 via-primary/70 to-primary/90" />
         </div>
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <img src={churchLogo} alt="Mercy Seat Family Fellowship" className="w-24 h-24 mx-auto mb-4 object-contain drop-shadow-lg" />
+          <img
+            src={churchLogo}
+            alt="Mercy Seat Family Fellowship"
+            className="w-24 h-24 mx-auto mb-4 object-contain drop-shadow-lg"
+          />
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-3 drop-shadow-lg">
             Mercy Seat Family Fellowship
           </h1>
@@ -51,19 +69,25 @@ const Index = () => {
               <MapPin className="w-4 h-4 text-accent" />
               <span>687 Elephant St, Villa Lisa</span>
             </div>
-            <a href="tel:0624194169" className="flex items-center gap-1.5 bg-white/15 backdrop-blur-sm rounded-full px-4 py-2 hover:bg-white/25 transition-colors">
+            <a
+              href="tel:0624194169"
+              className="flex items-center gap-1.5 bg-white/15 backdrop-blur-sm rounded-full px-4 py-2 hover:bg-white/25 transition-colors"
+            >
               <Phone className="w-4 h-4 text-accent" />
               <span>062 419 4169</span>
             </a>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold shadow-glow text-base">
+            <Button
+              size="lg"
+              className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold shadow-glow text-base"
+            >
               Join Us This Sunday
             </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
+            <Button
+              size="lg"
+              variant="outline"
               className="bg-white/10 backdrop-blur-sm text-white border-white hover:bg-white hover:text-primary font-semibold"
               onClick={() => setWatchOnlineOpen(true)}
             >
@@ -71,7 +95,10 @@ const Index = () => {
               Watch Online
             </Button>
             <Link to="/give">
-              <Button size="lg" className="bg-primary-foreground text-primary hover:bg-white/90 font-bold w-full">
+              <Button
+                size="lg"
+                className="bg-primary-foreground text-primary hover:bg-white/90 font-bold w-full"
+              >
                 Give / Tithe
               </Button>
             </Link>
@@ -88,7 +115,9 @@ const Index = () => {
             </div>
             <DialogTitle className="text-2xl">Coming Soon!</DialogTitle>
             <DialogDescription className="text-base pt-2">
-              The Watch Online feature is currently under development. Soon you'll be able to watch our live services and past sermons right here!
+              The Watch Online feature is currently under development. Soon
+              you'll be able to watch our live services and past sermons right
+              here!
             </DialogDescription>
           </DialogHeader>
           <Button onClick={() => setWatchOnlineOpen(false)} className="mt-4">
@@ -159,18 +188,19 @@ const Index = () => {
                 A Church Family United in Purpose
               </h2>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                Led by Apostle T.I. and Mrs P.P. Molefe, Mercy Seat Family Fellowship 
-                is a Christ-centred, family-driven community where believers worship, learn, and grow together.
+                Led by Apostle T.I. and Mrs P.P. Molefe, Mercy Seat Family
+                Fellowship is a Christ-centred, family-driven community where
+                believers worship, learn, and grow together.
               </p>
               <Button className="bg-primary hover:bg-primary/90 font-semibold">
                 Learn More About Us
               </Button>
             </div>
             <div className="relative">
-              <img 
-                src={pastorImage} 
-                alt="Pastor T.I Molefe" 
-                className="rounded-lg shadow-soft w-full h-[400px] object-cover"
+              <img
+                src={pastorImage}
+                alt="Pastor T.I Molefe"
+                className="rounded-lg shadow-soft w-full h-[500px] object-cover"
               />
               <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-accent/30 rounded-lg -z-10" />
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/20 rounded-lg -z-10" />
@@ -194,8 +224,9 @@ const Index = () => {
                   Rebuilding Strong Families In and For Christ
                 </h2>
                 <p className="text-muted-foreground text-lg leading-relaxed">
-                  We envision a community where every family is strengthened in faith, 
-                  united in love, and empowered to reflect God's design for family life.
+                  We envision a community where every family is strengthened in
+                  faith, united in love, and empowered to reflect God's design
+                  for family life.
                 </p>
               </CardContent>
             </Card>
@@ -214,29 +245,45 @@ const Index = () => {
                   <div className="flex items-start gap-3">
                     <div className="w-3 h-3 rounded-full bg-primary mt-2 flex-shrink-0" />
                     <div>
-                      <p className="text-accent-foreground font-semibold">Restoring and enriching family values.</p>
-                      <p className="text-accent-foreground/60 text-sm italic">Ephesians 6:1-4</p>
+                      <p className="text-accent-foreground font-semibold">
+                        Restoring and enriching family values.
+                      </p>
+                      <p className="text-accent-foreground/60 text-sm italic">
+                        Ephesians 6:1-4
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-3 h-3 rounded-full bg-primary mt-2 flex-shrink-0" />
                     <div>
-                      <p className="text-accent-foreground font-semibold">Reviving the true worship to God.</p>
-                      <p className="text-accent-foreground/60 text-sm italic">John 4:24</p>
+                      <p className="text-accent-foreground font-semibold">
+                        Reviving the true worship to God.
+                      </p>
+                      <p className="text-accent-foreground/60 text-sm italic">
+                        John 4:24
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-3 h-3 rounded-full bg-primary mt-2 flex-shrink-0" />
                     <div>
-                      <p className="text-accent-foreground font-semibold">Equipping and enriching leaders.</p>
-                      <p className="text-accent-foreground/60 text-sm italic">Romans 12:11-12</p>
+                      <p className="text-accent-foreground font-semibold">
+                        Equipping and enriching leaders.
+                      </p>
+                      <p className="text-accent-foreground/60 text-sm italic">
+                        Romans 12:11-12
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-3 h-3 rounded-full bg-primary mt-2 flex-shrink-0" />
                     <div>
-                      <p className="text-accent-foreground font-semibold">Holistically reaching out to the community.</p>
-                      <p className="text-accent-foreground/60 text-sm italic">Matthew 28:19-20</p>
+                      <p className="text-accent-foreground font-semibold">
+                        Holistically reaching out to the community.
+                      </p>
+                      <p className="text-accent-foreground/60 text-sm italic">
+                        Matthew 28:19-20
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -250,20 +297,31 @@ const Index = () => {
       <section className="container mx-auto px-4 py-16">
         <Card className="bg-gradient-divine text-white border-0">
           <CardContent className="p-12 text-center">
-            <img src={churchLogo} alt="Mercy Seat Family Fellowship" className="w-20 h-20 mx-auto mb-6 object-contain" />
+            <img
+              src={churchLogo}
+              alt="Mercy Seat Family Fellowship"
+              className="w-20 h-20 mx-auto mb-6 object-contain"
+            />
             <h2 className="text-3xl font-bold mb-4">
               Experience God's Love With Us
             </h2>
             <p className="text-white/90 mb-8 max-w-2xl mx-auto text-lg">
-              The dwelling place of God's tangible presence.<br />
+              The dwelling place of God's tangible presence.
+              <br />
               We are Christ Centred and Family Driven.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-white text-primary hover:bg-white/90 font-bold">
+              <Button
+                size="lg"
+                className="bg-white text-primary hover:bg-white/90 font-bold"
+              >
                 Plan Your Visit
               </Button>
               <Link to="/give">
-                <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 font-bold">
+                <Button
+                  size="lg"
+                  className="bg-accent text-accent-foreground hover:bg-accent/90 font-bold"
+                >
                   Give / Tithe
                 </Button>
               </Link>
