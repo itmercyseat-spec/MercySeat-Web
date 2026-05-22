@@ -199,8 +199,8 @@ const Index = () => {
             <div className="relative">
               <img
                 src={pastorImage}
-                alt="Pastor T.I Molefe"
-                className="rounded-lg shadow-soft w-full h-[500px] object-cover"
+                alt="Apostle T.I. & Mrs P.P. Molefe"
+                className="rounded-lg shadow-soft w-full h-[500px] object-cover object-top"
               />
               <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-accent/30 rounded-lg -z-10" />
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/20 rounded-lg -z-10" />
@@ -286,6 +286,65 @@ const Index = () => {
                       </p>
                     </div>
                   </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Values */}
+          <div className="mt-8">
+            <Card className="bg-accent border-0 overflow-hidden shadow-xl">
+              <CardContent className="p-6 lg:p-8">
+                <div className="mb-3">
+                  <span className="inline-block px-3 py-1 bg-primary text-primary-foreground rounded-full text-xs font-bold">
+                    Our Values
+                  </span>
+                </div>
+                <h2 className="text-lg md:text-xl font-bold mb-1 text-accent-foreground">
+                  We Are a Church Founded on LEVELS
+                </h2>
+                <p className="text-accent-foreground/70 mb-4 italic text-xs">
+                  Love · Empathy · Versatility · Excellence · Loyalty · Service
+                </p>
+                <div className="space-y-2.5">
+                  {[
+                    {
+                      title: "Love",
+                      desc: "Love and respect are our culture and the foundation of everything we do.",
+                    },
+                    {
+                      title: "Empathy",
+                      desc: "We carry each other's burdens and spread mercy.",
+                    },
+                    {
+                      title: "Versatility",
+                      desc: "We are flexible and accommodative, yet rooted in God's word.",
+                    },
+                    {
+                      title: "Excellence",
+                      desc: "Everything about God is excellent. So we lead, minister and serve with excellence.",
+                    },
+                    {
+                      title: "Loyalty",
+                      desc: "Everything we do is about supporting the church's vision and the kingdom of God.",
+                    },
+                    {
+                      title: "Service",
+                      desc: "We serve God by serving His people.",
+                    },
+                  ].map((v, i) => (
+                    <div key={i} className="flex items-start gap-2.5">
+                      <div className="w-2 h-2 rounded-full bg-primary mt-1.5 flex-shrink-0" />
+                      <div>
+                        <p className="text-accent-foreground font-semibold text-sm">
+                          {v.title}
+                        </p>
+                        <p className="text-accent-foreground/70 text-xs">
+                          {v.desc}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </CardContent>
             </Card>
