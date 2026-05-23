@@ -54,7 +54,7 @@ export const Footer = () => {
               <div className="flex items-start gap-2 text-primary-foreground/80">
                 <MapPin className="w-4 h-4 text-accent mt-0.5" />
                 <span className="text-sm">
-                  687 Elephant Street, Villa Lisa, Boksburg
+                  678 Elephant Street, Villa Lisa, Boksburg
                 </span>
               </div>
             </div>

@@ -67,7 +67,7 @@ const Index = () => {
             </div>
             <div className="flex items-center gap-1.5 bg-white/15 backdrop-blur-sm rounded-full px-4 py-2">
               <MapPin className="w-4 h-4 text-accent" />
-              <span>687 Elephant St, Villa Lisa</span>
+              <span>678 Elephant St, Villa Lisa</span>
             </div>
             <a
               href="tel:0624194169"
