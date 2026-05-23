@@ -63,12 +63,17 @@ const Index = () => {
           <div className="flex flex-wrap justify-center gap-4 mb-8 text-sm text-white/90">
             <div className="flex items-center gap-1.5 bg-white/15 backdrop-blur-sm rounded-full px-4 py-2">
               <Clock className="w-4 h-4 text-accent" />
-              <span>Sundays 09h00 – 11h30</span>
+              <span>Sundays 08h00 – 11h30</span>
             </div>
-            <div className="flex items-center gap-1.5 bg-white/15 backdrop-blur-sm rounded-full px-4 py-2">
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=678+Elephant+St,+Villa+Liza,+Boksburg,+1459"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 bg-white/15 backdrop-blur-sm rounded-full px-4 py-2 hover:bg-white/25 transition-colors"
+            >
               <MapPin className="w-4 h-4 text-accent" />
-              <span>678 Elephant St, Villa Lisa</span>
-            </div>
+              <span>678 Elephant St, Villa Liza</span>
+            </a>
             <a
               href="tel:0624194169"
               className="flex items-center gap-1.5 bg-white/15 backdrop-blur-sm rounded-full px-4 py-2 hover:bg-white/25 transition-colors"
