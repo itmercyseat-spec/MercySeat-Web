@@ -63,7 +63,7 @@ const Index = () => {
           <div className="flex flex-wrap justify-center gap-4 mb-8 text-sm text-white/90">
             <div className="flex items-center gap-1.5 bg-white/15 backdrop-blur-sm rounded-full px-4 py-2">
               <Clock className="w-4 h-4 text-accent" />
-              <span>Sundays 08h00 – 11h30</span>
+              <span>Sundays 09h00 – 11h30</span>
             </div>
             <a
               href="https://www.google.com/maps/search/?api=1&query=678+Elephant+St,+Villa+Liza,+Boksburg,+1459"
