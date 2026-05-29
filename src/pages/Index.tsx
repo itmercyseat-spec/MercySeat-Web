@@ -63,7 +63,7 @@ const Index = () => {
           <div className="flex flex-wrap justify-center gap-4 mb-8 text-sm text-white/90">
             <div className="flex items-center gap-1.5 bg-white/15 backdrop-blur-sm rounded-full px-4 py-2">
               <Clock className="w-4 h-4 text-accent" />
-              <span>Sundays 09h00 – 11h30</span>
+              <span>Sundays 08h00 – 11h30</span>
             </div>
             <a
               href="https://www.google.com/maps/search/?api=1&query=678+Elephant+St,+Villa+Liza,+Boksburg,+1459"
@@ -214,143 +214,145 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Vision & Mission */}
+      {/* Vision, Mission & Values */}
       <section className="py-16 bg-gradient-to-br from-primary via-primary to-church-purple-dark">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <Card className="bg-white border-0 overflow-hidden shadow-xl">
-              <CardContent className="p-8 lg:p-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+            {/* Vision */}
+            <Card className="bg-white border-0 overflow-hidden shadow-xl relative rounded-lg h-full">
+              <div
+                className="absolute inset-0 bg-cover bg-center opacity-10 pointer-events-none"
+                style={{
+                  backgroundImage: `url(${churchLogo})`,
+                  backgroundSize: "60%",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "right bottom",
+                }}
+              />
+              <CardContent className="p-8 relative text-center h-full flex flex-col">
                 <div className="mb-4">
                   <span className="inline-block px-4 py-2 bg-accent text-accent-foreground rounded-full text-sm font-bold">
                     Our Vision
                   </span>
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
+                <h2 className="text-2xl font-bold mb-4 text-primary">
                   Rebuilding Strong Families In and For Christ
                 </h2>
-                <p className="text-muted-foreground text-lg leading-relaxed">
-                  We envision a community where every family is strengthened in
-                  faith, united in love, and empowered to reflect God's design
-                  for family life.
+                <p className="text-muted-foreground leading-relaxed">
+                  A community where every family is strengthened in faith,
+                  united in love, and empowered to reflect God's design for
+                  family life.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="bg-accent border-0 overflow-hidden shadow-xl">
-              <CardContent className="p-8 lg:p-10">
+            {/* Mission */}
+            <Card className="bg-accent border-0 overflow-hidden shadow-xl relative rounded-lg h-full">
+              <div
+                className="absolute inset-0 bg-cover bg-center opacity-10 pointer-events-none"
+                style={{
+                  backgroundImage: `url(${churchLogo})`,
+                  backgroundSize: "60%",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "right bottom",
+                }}
+              />
+              <CardContent className="p-8 relative text-center h-full flex flex-col">
                 <div className="mb-4">
                   <span className="inline-block px-4 py-2 bg-primary text-primary-foreground rounded-full text-sm font-bold">
                     Our Mission
                   </span>
                 </div>
-                <h2 className="text-2xl md:text-3xl font-bold mb-6 text-accent-foreground">
-                  We Are Committed To:
+                <h2 className="text-2xl font-bold mb-4 text-accent-foreground">
+                  We Are Committed To
                 </h2>
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <div className="w-3 h-3 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    <div>
-                      <p className="text-accent-foreground font-semibold">
-                        Restoring and enriching family values.
-                      </p>
-                      <p className="text-accent-foreground/60 text-sm italic">
-                        Ephesians 6:1-4
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-3 h-3 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    <div>
-                      <p className="text-accent-foreground font-semibold">
-                        Reviving the true worship to God.
-                      </p>
-                      <p className="text-accent-foreground/60 text-sm italic">
-                        John 4:24
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-3 h-3 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    <div>
-                      <p className="text-accent-foreground font-semibold">
-                        Equipping and enriching leaders.
-                      </p>
-                      <p className="text-accent-foreground/60 text-sm italic">
-                        Romans 12:11-12
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-3 h-3 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    <div>
-                      <p className="text-accent-foreground font-semibold">
-                        Holistically reaching out to the community.
-                      </p>
-                      <p className="text-accent-foreground/60 text-sm italic">
-                        Matthew 28:19-20
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <ul className="space-y-3 text-left">
+                  {[
+                    { t: "Restoring family values.", r: "Ephesians 6:1-4" },
+                    { t: "Reviving true worship to God.", r: "John 4:24" },
+                    {
+                      t: "Equipping and enriching leaders.",
+                      r: "Romans 12:11-12",
+                    },
+                    {
+                      t: "Reaching out to the community.",
+                      r: "Matthew 28:19-20",
+                    },
+                  ].map((m, i) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <div className="w-2.5 h-2.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
+                      <div>
+                        <p className="text-accent-foreground font-semibold text-sm">
+                          {m.t}
+                        </p>
+                        <p className="text-accent-foreground/60 text-xs italic">
+                          {m.r}
+                        </p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
               </CardContent>
             </Card>
-          </div>
 
-          {/* Values */}
-          <div className="mt-8">
-            <Card className="bg-accent border-0 overflow-hidden shadow-xl">
-              <CardContent className="p-6 lg:p-8">
-                <div className="mb-3">
-                  <span className="inline-block px-3 py-1 bg-primary text-primary-foreground rounded-full text-xs font-bold">
+            {/* Values */}
+            <Card className="bg-church-pink border-0 overflow-hidden shadow-xl relative rounded-lg h-full">
+              <div
+                className="absolute inset-0 bg-cover bg-center opacity-10 pointer-events-none"
+                style={{
+                  backgroundImage: `url(${churchLogo})`,
+                  backgroundSize: "60%",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "right bottom",
+                }}
+              />
+              <CardContent className="p-8 relative text-center h-full flex flex-col">
+                <div className="mb-4">
+                  <span className="inline-block px-4 py-2 bg-primary text-primary-foreground rounded-full text-sm font-bold">
                     Our Values
                   </span>
                 </div>
-                <h2 className="text-lg md:text-xl font-bold mb-1 text-accent-foreground">
-                  We Are a Church Founded on LEVELS
+                <h2 className="text-2xl font-bold mb-2 text-white">
+                  Founded on LEVELS
                 </h2>
-                <p className="text-accent-foreground/70 mb-4 italic text-xs">
+                <p className="text-white/80 mb-4 italic text-xs">
                   Love · Empathy · Versatility · Excellence · Loyalty · Service
                 </p>
-                <div className="space-y-2.5">
+                <ul className="space-y-3 text-left">
                   {[
                     {
                       title: "Love",
-                      desc: "Love and respect are our culture and the foundation of everything we do.",
+                      desc: "The foundation of everything we do.",
                     },
                     {
                       title: "Empathy",
-                      desc: "We carry each other's burdens and spread mercy.",
+                      desc: "We carry each other's burdens.",
                     },
                     {
                       title: "Versatility",
-                      desc: "We are flexible and accommodative, yet rooted in God's word.",
+                      desc: "Flexible, yet rooted in God's word.",
                     },
-                    {
-                      title: "Excellence",
-                      desc: "Everything about God is excellent. So we lead, minister and serve with excellence.",
-                    },
+                    { title: "Excellence", desc: "We serve with excellence." },
                     {
                       title: "Loyalty",
-                      desc: "Everything we do is about supporting the church's vision and the kingdom of God.",
+                      desc: "Supporting the church's vision.",
                     },
                     {
                       title: "Service",
-                      desc: "We serve God by serving His people.",
+                      desc: "Serving God by serving His people.",
                     },
                   ].map((v, i) => (
-                    <div key={i} className="flex items-start gap-2.5">
-                      <div className="w-2 h-2 rounded-full bg-primary mt-1.5 flex-shrink-0" />
+                    <li key={i} className="flex items-start gap-2">
+                      <div className="w-2.5 h-2.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
                       <div>
-                        <p className="text-accent-foreground font-semibold text-sm">
+                        <p className="text-white font-semibold text-sm">
                           {v.title}
                         </p>
-                        <p className="text-accent-foreground/70 text-xs">
-                          {v.desc}
-                        </p>
+                        <p className="text-white/80 text-xs">{v.desc}</p>
                       </div>
-                    </div>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </CardContent>
             </Card>
           </div>

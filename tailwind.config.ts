@@ -2,7 +2,12 @@ import type { Config } from "tailwindcss";
 
 export default {
   darkMode: ["class"],
-  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -56,16 +61,19 @@ export default {
           gold: "hsl(var(--church-gold))",
           "gold-light": "hsl(var(--church-gold-light))",
           "gold-dark": "hsl(var(--church-gold-dark))",
+          pink: "hsl(var(--church-pink))",
+          "pink-light": "hsl(var(--church-pink-light))",
+          "pink-dark": "hsl(var(--church-pink-dark))",
         },
       },
       backgroundImage: {
-        'gradient-divine': 'var(--gradient-divine)',
-        'gradient-worship': 'var(--gradient-worship)',
-        'gradient-mission': 'var(--gradient-mission)',
+        "gradient-divine": "var(--gradient-divine)",
+        "gradient-worship": "var(--gradient-worship)",
+        "gradient-mission": "var(--gradient-mission)",
       },
       boxShadow: {
-        'soft': 'var(--shadow-soft)',
-        'glow': 'var(--shadow-glow)',
+        soft: "var(--shadow-soft)",
+        glow: "var(--shadow-glow)",
       },
       borderRadius: {
         lg: "var(--radius)",

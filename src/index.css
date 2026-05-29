@@ -8,57 +8,60 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 258 55% 15%;
+    --background: 335 70% 96%;
+    --foreground: 285 55% 14%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 258 55% 15%;
+    --card: 335 75% 98%;
+    --card-foreground: 285 55% 14%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 258 55% 15%;
+    --popover: 335 75% 98%;
+    --popover-foreground: 285 55% 14%;
 
-    /* Royal Purple - Spiritual depth (DOMINANT) */
-    --primary: 270 80% 55%;
+    /* Purple-pink primary (DOMINANT) */
+    --primary: 315 75% 52%;
     --primary-foreground: 0 0% 100%;
     
-    /* Clean White/Light Grey - Peace and calm */
-    --secondary: 240 20% 96%;
-    --secondary-foreground: 258 55% 15%;
+    /* Pink-tinted neutral */
+    --secondary: 335 70% 90%;
+    --secondary-foreground: 285 55% 16%;
 
-    --muted: 250 15% 95%;
-    --muted-foreground: 258 25% 45%;
+    --muted: 335 55% 92%;
+    --muted-foreground: 295 28% 38%;
 
     /* Vibrant Gold - Divine excellence (DOMINANT) */
     --accent: 42 100% 50%;
-    --accent-foreground: 258 55% 10%;
+    --accent-foreground: 285 55% 12%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 258 20% 90%;
-    --input: 258 20% 90%;
-    --ring: 258 70% 55%;
+    --border: 330 65% 84%;
+    --input: 330 65% 84%;
+    --ring: 320 80% 60%;
 
     --radius: 0.75rem;
 
-    /* Custom church colors - Purple & Gold DOMINANT */
-    --church-purple: 270 80% 55%;
-    --church-purple-light: 270 80% 65%;
-    --church-purple-dark: 270 80% 40%;
+    /* Custom church colors - Purple, Pink & Gold */
+    --church-purple: 290 70% 50%;
+    --church-purple-light: 300 75% 66%;
+    --church-purple-dark: 285 65% 38%;
     --church-blue: 200 70% 75%;
     --church-blue-light: 200 70% 85%;
     --church-gold: 42 100% 50%;
     --church-gold-light: 42 100% 62%;
     --church-gold-dark: 42 100% 42%;
+    --church-pink: 330 85% 65%;
+    --church-pink-light: 335 90% 84%;
+    --church-pink-dark: 325 78% 50%;
 
-    /* Gradients - Purple & Gold emphasis */
-    --gradient-divine: linear-gradient(135deg, hsl(var(--church-purple)) 0%, hsl(var(--church-gold)) 100%);
-    --gradient-worship: linear-gradient(180deg, hsl(var(--church-purple) / 0.1) 0%, hsl(var(--background)) 100%);
-    --gradient-mission: linear-gradient(135deg, hsl(var(--church-gold)) 0%, hsl(var(--church-purple)) 100%);
+    /* Gradients - Purple, Pink & Gold blend */
+    --gradient-divine: linear-gradient(135deg, hsl(var(--church-purple)) 0%, hsl(var(--church-pink)) 50%, hsl(var(--church-gold)) 100%);
+    --gradient-worship: linear-gradient(180deg, hsl(var(--church-pink) / 0.35) 0%, hsl(var(--background)) 100%);
+    --gradient-mission: linear-gradient(135deg, hsl(var(--church-gold)) 0%, hsl(var(--church-pink)) 50%, hsl(var(--church-purple)) 100%);
     
     /* Shadows */
-    --shadow-soft: 0 4px 20px hsl(var(--church-purple) / 0.1);
-    --shadow-glow: 0 0 30px hsl(var(--church-gold) / 0.3);
+    --shadow-soft: 0 4px 24px hsl(var(--church-pink) / 0.35);
+    --shadow-glow: 0 0 32px hsl(var(--church-pink) / 0.5);
   }
 
   .dark {
